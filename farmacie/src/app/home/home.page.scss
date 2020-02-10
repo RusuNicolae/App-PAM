@@ -1,0 +1,46 @@
+ion-button{
+    --background:#77fd88;
+    --background-hover: #e6e6ff;
+    --color:  #0c2b0aea;
+    width: 350px;
+    height:50px;
+    height:70px;
+    --opacity: 75%;
+    font-weight: bold;
+    font-size:20px;
+}
+
+#button_cauta{
+    top: 70%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+#button_farm{
+    top: 85%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+#title{
+    font-weight: bold;
+    font-size:20px;
+    --color:  #fefffe;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    
+    // background: url('../../../images/logo.png') no-repeat center;
+}
+
+ion-content{
+     
+    --background: url('../../../images/2.jpg') no-repeat; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+ }

@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>Lista farmaciilor partenere:</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    
+
+  <ion-list>
+    <ng-container *ngFor="let f of farms">
+      <ion-item>
+        <div class="d-flex justify-content-between" style="width: 100%;">
+          <div>{{f.id}}</div>
+          <div>{{f.name}}</div>
+          <div>{{f.strada}}</div>
+        </div>
+          </ion-item>
+          </ng-container>
+          </ion-list>
+
+          <!-- <h1>Farms</h1> -->
+
+  <!-- <ion-list>
+    <ng-container *ngFor="let f of farms">
+      <ion-item>
+        <div class="d-flex justify-content-between" style="width: 100%;">
+          <div>{{f.id}}</div>
+          <div>{{f.name}}</div>
+          <div>{{f.strada}}</div>
+        </div>
+      </ion-item>
+    </ng-container>
+  </ion-list> -->
+          
+  <ion-button (click)=goDetails() size="small" color="success">Mai multe detalii</ion-button>
+
+  <ion-button  (click)=goMap() size="small" color="success">Vezi pe harta</ion-button>
+
+  <ion-button (click)=goBack() fill="outline" color="success"> 
+    Back  
+    </ion-button>
+
+</ion-content>

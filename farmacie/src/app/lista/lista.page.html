@@ -1,0 +1,43 @@
+<ion-header no-border>
+  <ion-toolbar color="success">
+    <ion-title top center edge id = "title">Medicamente disponibile: </ion-title>
+  </ion-toolbar >
+
+  <ion-toolbar color ="success">
+  <ion-searchbar  placeholder ="Cauta" animated (ionChange)="CautaMed($event)" >
+
+  </ion-searchbar>
+ </ion-toolbar>
+
+
+</ion-header>
+
+<ion-content>
+
+  <ion-list *ngIf="meds.length === 0">
+    <ion-item *ngFor="let i of [1,1,1,1,1,1,1,1,1,1,1]">
+      <ion-label>
+        <ion-skeleton-text width="40%"></ion-skeleton-text>
+        <ion-skeleton-text width="70%"></ion-skeleton-text>
+      </ion-label>
+
+    </ion-item>
+  </ion-list>
+
+    <ion-list>
+        <ng-container *ngFor="let m of meds | filtru:textCauta">
+          <ion-item>
+            <div class="d-flex justify-content-between" style="width: 100%;">
+              <div>{{m.name}}</div>
+              <div>{{m.farmacie}}</div>
+              <!-- <ion-button size="small" color="success">Detalii</ion-button> -->
+            </div>
+              </ion-item>
+              </ng-container>
+              </ion-list>
+
+
+    <ion-button (click)=goBack() fill="outline" color="success"> 
+      Back  
+      </ion-button>
+</ion-content>
